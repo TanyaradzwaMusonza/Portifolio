@@ -1,0 +1,182 @@
+:root {
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+  --accent: #ec4899;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradient Border Cards */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Card Hover */
+.card-hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+/* Tech Icons */
+.tech-icon {
+  transition: transform 0.3s, filter 0.3s;
+}
+.tech-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(59,130,246,0.7));
+}
+
+/* Button Glow */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(59,130,246,0.5);
+}
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(30deg);
+  transition: all 0.4s;
+}
+.btn-glow:hover::after {
+  left: 100%;
+}
+
+/* Timeline Items */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: 2px solid #0f172a;
+}
+.timeline-connector {
+  position: absolute;
+  left: -1rem;
+  top: 1rem;
+  bottom: -1rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+/* Tabs */
+.tab-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  color: #94a3b8;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.tab-btn:hover {
+  color: #38bdf8;
+}
+.active-tab {
+  color: #fff;
+  border-color: #38bdf8;
+  background: rgba(56,189,248,0.15);
+  box-shadow: 0 0 15px rgba(56,189,248,0.3);
+}
+.tab-content {
+  animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* 🧩 Universal Overflow & Responsiveness Fix */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent large containers or absolute elements from overflowing */
+section, nav, footer, div, img, video, canvas {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix transforms or elements pushed beyond viewport */
+.fixed, .absolute {
+  max-width: 100vw;
+}
+
+/* For safety on small devices */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+  section, nav, footer, div {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+/* Tabs responsiveness fix */
+@media (max-width: 768px) {
+  .tab-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    flex: 1 1 100%;
+    text-align: center;
+    margin: 0;
+  }
+}
+
