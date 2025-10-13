@@ -236,7 +236,6 @@ form.addEventListener('submit', function(e) {
 });
 
 
-
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const menuIcon = menuToggle.querySelector('i');
