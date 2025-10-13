@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,3 +242,957 @@
 
 
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanyaradzwa Roshly Musonza | Futuristic Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <!-- Cursor Effect -->
+
+    <div
+      class="cursor-dot fixed w-4 h-4 rounded-full bg-white mix-blend-difference pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2"
+    ></div>
+    <div
+      class="cursor-circle fixed w-8 h-8 rounded-full border-2 border-white mix-blend-difference pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-out"
+    ></div>
+<!-- Navigation -->
+<nav class="fixed w-full z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#" class="text-2xl font-bold gradient-text">TRM</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8">
+      <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+      <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
+      <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+      <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a>
+      <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden text-gray-300 focus:outline-none">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+
+<div
+  id="mobile-menu"
+  class="hidden flex flex-col items-center space-y-6 py-8 bg-gradient-to-b from-gray-900/95 via-gray-800/90 to-gray-900/95 md:hidden backdrop-blur-xl border-t border-gray-800"
+>
+  <a href="#about" class="text-gray-200 text-lg hover:gradient-text transition-colors">About</a>
+  <a href="#skills" class="text-gray-200 text-lg hover:gradient-text transition-colors">Skills</a>
+  <a href="#projects" class="text-gray-200 text-lg hover:gradient-text transition-colors">Projects</a>
+  <a href="#experience" class="text-gray-200 text-lg hover:gradient-text transition-colors">Experience</a>
+  <a href="#contact" class="text-gray-200 text-lg hover:gradient-text transition-colors">Contact</a>
+</div>
+
+</nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
+      <div class="absolute inset-0 z-0 opacity-20">
+        <div id="particles-js" class="w-full h-full"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-3 py-20 text-center relative z-10 ">
+        <h1 class="hero-text text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          Hi, I'm <span class="gradient-text">Tanyaradzwa Roshly Musonza</span>
+          <br />
+          <span class="text-3xl md:text-5xl font-medium"
+            >Frontend Engineer & Creative Developer</span
+          >
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+          I craft immersive digital experiences with cutting-edge web
+          technologies and pixel-perfect design.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#projects"
+            class="btn-glow px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-medium text-white inline-block"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            class="px-8 py-3 border-2 border-blue-500 rounded-full font-medium text-blue-400 hover:bg-blue-900 hover:bg-opacity-30 transition-colors inline-block"
+          >
+            Let's Connect
+          </a>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+          <span class="gradient-text">About Me</span>
+        </h2>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <div class="lg:w-1/2 gradient-border p-1 rounded-lg">
+            <div class="bg-gray-800 rounded-lg p-6 h-full">
+              <div class="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+                <img
+                  src="indaba.jpg"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <h3 class="text-2xl font-bold mb-4">
+              Building the Future, One Pixel at a Time
+            </h3>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+              I'm a passionate frontend developer with expertise in React,
+              Next.js, and modern CSS frameworks. My journey in tech began with
+              a fascination for how things work, which evolved into a love for
+              creating beautiful, functional digital experiences.
+            </p>
+            <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+              When I'm not coding, you can find me exploring new design trends,
+              contributing to open-source projects, or mentoring aspiring
+              developers. I believe in the power of technology to create
+              meaningful connections and solve real-world problems.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center gap-2">
+                <i data-feather="map-pin" class="text-blue-400"></i>
+                <span>Harare, Zimbabwe</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-feather="mail" class="text-purple-400"></i>
+                <span>musonzaroshly@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-feather="phone" class="text-pink-400"></i>
+                <span>+263 783 482 595</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900 bg-opacity-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+          <span class="gradient-text">Tech Stack</span>
+        </h2>
+        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
+          The tools and technologies I use to bring ideas to life
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <!-- HTML5 -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">HTML5</span>
+          </div>
+
+          <!-- CSS3 -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">CSS3</span>
+          </div>
+
+          <!-- JavaScript -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">JavaScript</span>
+          </div>
+
+          <!-- React -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">React</span>
+          </div>
+
+          <!-- Next.js -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+              alt="Next.js"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">Next.js</span>
+          </div>
+
+          <!-- Tailwind -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Tailwind CSS"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">Tailwind CSS</span>
+          </div>
+
+          <!-- Python -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">Python</span>
+          </div>
+
+          <!-- Git -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">Git</span>
+          </div>
+
+          <!-- GitHub -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">GitHub</span>
+          </div>
+
+          <!-- Node.js -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">Node.js</span>
+          </div>
+
+          <!-- Supabase -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+              alt="Supabase"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">Supabase</span>
+          </div>
+
+          <!-- Webpack -->
+          <div
+            class="tech-icon flex flex-col items-center justify-center p-6 bg-gray-800 rounded-lg card-hover"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
+              alt="Webpack"
+              class="w-12 h-12 mb-2"
+            />
+            <span class="text-gray-300">Webpack</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+          <span class="gradient-text">Featured Projects</span>
+        </h2>
+        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
+          A selection of my recent work showcasing creativity and technical
+          skills
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Cater D'Luxe -->
+          <div class="gradient-border rounded-lg">
+            <div class="bg-gray-800 rounded-lg p-6 h-full flex flex-col">
+              <div
+                class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-4"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1672826979217-7156a305acf5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhdGVyaW5nfGVufDB8fDB8fHww"
+                  alt="Cater D'Luxe"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2">Cater D'Luxe</h3>
+              <p class="text-gray-300 mb-4 flex-grow">
+                Next.js + Tailwind CSS catering website with interactive menus
+                and smooth navigation.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded text-xs"
+                  >Next.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded text-xs"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs"
+                  >Responsive</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://catering-beryl.vercel.app/"
+                  target="_blank"
+                  class="btn-glow px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md font-medium text-white text-sm flex items-center gap-2"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+                <a
+                  href="https://github.com/TanyaradzwaMusonza/Carter-D-luxe.git"
+                  class="px-4 py-2 border border-gray-600 rounded-md font-medium text-gray-300 hover:bg-gray-700 text-sm flex items-center gap-2"
+                >
+                  <i data-feather="github" class="w-4 h-4"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wedding Planner -->
+          <div class="gradient-border rounded-lg">
+            <div class="bg-gray-800 rounded-lg p-6 h-full flex flex-col">
+              <div
+                class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-4"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1509316554658-04f9287cdb78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlZGRpbmclMjBwbGFubmVyfGVufDB8fDB8fHww"
+                  alt="Wedding Planner"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2">Wedding Planner App</h3>
+              <p class="text-gray-300 mb-4 flex-grow">
+                Next.js + Supabase application with user dashboards and vendor
+                management.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded text-xs"
+                  >Next.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-orange-900 bg-opacity-50 text-orange-300 rounded text-xs"
+                  >Supabase</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded text-xs"
+                  >Tailwind CSS</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://wedding-lemon-theta-79.vercel.app/"
+                  target="_blank"
+                  class="btn-glow px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md font-medium text-white text-sm flex items-center gap-2"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+                <a
+                  href="#"
+                  class="px-4 py-2 border border-gray-600 rounded-md font-medium text-gray-300 hover:bg-gray-700 text-sm flex items-center gap-2"
+                >
+                  <i data-feather="github" class="w-4 h-4"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Baker's Inn -->
+          <div class="gradient-border rounded-lg">
+            <div class="bg-gray-800 rounded-lg p-6 h-full flex flex-col">
+              <div
+                class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-4"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtce2_nD6d9JSlJLt2Wgf0yb7qmkYtg08QQ&s"
+                  alt="Baker's Inn"
+                  class="w-full h-[230px] object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2">Baker's Inn Website</h3>
+              <p class="text-gray-300 mb-4 flex-grow">
+                Responsive bakery website with optimized UI/UX built with React
+                and Tailwind CSS.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded text-xs"
+                  >React</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded text-xs"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs"
+                  >Responsive</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://bakers-theta.vercel.app/"
+                  target="_blank"
+                  class="btn-glow px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md font-medium text-white text-sm flex items-center gap-2"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+                <a
+                  href="#"
+                  class="px-4 py-2 border border-gray-600 rounded-md font-medium text-gray-300 hover:bg-gray-700 text-sm flex items-center gap-2"
+                >
+                  <i data-feather="github" class="w-4 h-4"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini Course Planner -->
+          <div class="gradient-border rounded-lg">
+            <div class="bg-gray-800 rounded-lg p-6 h-full flex flex-col">
+              <div
+                class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-4"
+              >
+                <img
+                  src="http://static.photos/education/640x360/4"
+                  alt="Mini Course Planner"
+                  class="w-full h-[230px] object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2">Mini Course Planner</h3>
+              <p class="text-gray-300 mb-4 flex-grow">
+                Next.js application with search, filters, and course planning
+                functionality.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded text-xs"
+                  >Next.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded text-xs"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs"
+                  >Interactive</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://tanyaradzwamusonza.github.io/Mini-Course-Planner/"
+                  target="_blank"
+                  class="btn-glow px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md font-medium text-white text-sm flex items-center gap-2"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+                <a
+                  href="https://github.com/TanyaradzwaMusonza/Mini-Course-Planner.git"
+                  class="px-4 py-2 border border-gray-600 rounded-md font-medium text-gray-300 hover:bg-gray-700 text-sm flex items-center gap-2"
+                >
+                  <i data-feather="github" class="w-4 h-4"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payslip Generator -->
+          <div class="gradient-border rounded-lg">
+            <div class="bg-gray-800 rounded-lg p-6 h-full flex flex-col">
+              <div
+                class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-4"
+              >
+                <img
+                  src="http://static.photos/office/640x360/5"
+                  alt="Payslip Generator"
+                  class="w-full h-[230px] object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2">Payslip Generator</h3>
+              <p class="text-gray-300 mb-4 flex-grow">
+                Python application automating employee payslip generation with
+                PDF output.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded text-xs"
+                  >Python</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs"
+                  >Automation</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded text-xs"
+                  >PDF Generation</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn-glow px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md font-medium text-white text-sm flex items-center gap-2 opacity-50 cursor-not-allowed"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> Private
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MoodMeal -->
+          <div class="gradient-border rounded-lg">
+            <div class="bg-gray-800 rounded-lg p-6 h-full flex flex-col">
+              <div
+                class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-4"
+              >
+                <img
+                  src="https://media.istockphoto.com/id/2173327283/photo/happy-son-hugging-his-mom-during-a-family-breakfast-in-a-brazilian-home.webp?a=1&b=1&s=612x612&w=0&k=20&c=9DgdCkYnuDoxeag1CZn90Zugb0VSp1h5xiNaRW3Sdxg="
+                  alt="MoodMeal"
+                  class="w-full h-[230px] object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-2">MoodMeal (Ongoing)</h3>
+              <p class="text-gray-300 mb-4 flex-grow">
+                Responsive interactive app recommending meals and music based on user mood.
+                
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded text-xs"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded text-xs"
+                  >CSS3</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs"
+                  >Interactive</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <a
+                  href="https://tanyaradzwamusonza.github.io/Moodmeal/"
+                  target="_blank"
+                  class="btn-glow px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md font-medium text-white text-sm flex items-center gap-2"
+                >
+                  <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+                <a
+                  href="https://github.com/TanyaradzwaMusonza/Moodmeal.git"
+                  class="px-4 py-2 border border-gray-600 rounded-md font-medium text-gray-300 hover:bg-gray-700 text-sm flex items-center gap-2"
+                >
+                  <i data-feather="github" class="w-4 h-4"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience, Education & Achievements Tabs -->
+    <section id="experienc" class="py-20 bg-gray-900 bg-opacity-50 ">
+      <div class="max-w-7xl mx-auto px-6 text-gray-300 ">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
+          <span class="gradient-text">Experience & Education</span>
+        </h2>
+
+       <!-- Tabs -->
+<div class="tab-container flex justify-center mb-12 space-x-4">
+  <button class="tab-btn active-tab" data-tab="experience">
+    Experience
+  </button>
+  <button class="tab-btn" data-tab="education">Education</button>
+  <button class="tab-btn" data-tab="achievements">Achievements</button>
+</div>
+
+        <!-- Tab Content Wrapper -->
+        <div id="tab-content" class="max-w-3xl mx-auto">
+          <!-- EXPERIENCE TAB -->
+          <div
+            id="experience"
+            class="tab-content active-tab-content space-y-10"
+          >
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold text-blue-400">
+                Software Engineering Intern
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">
+                Ministry of Youth Empowerment, Development and Vocational
+                Training<br /><span class="text-blue-500"
+                  >Aug 2023 – Aug 2024</span
+                >
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>
+                  Assisted in development and maintenance of internal systems.
+                </li>
+                <li>
+                  Participated in debugging, testing, and documentation of
+                  software projects.
+                </li>
+                <li>
+                  Gained hands-on experience in both frontend and backend tasks.
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold text-pink-400">
+                Scratch Volunteer Teacher
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">
+                Uncommon.org<br /><span class="text-pink-500"
+                  >2025 – Present</span
+                >
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>
+                  Teaching foundational coding concepts using Scratch to
+                  beginners.
+                </li>
+                <li>
+                  Creating engaging lessons to promote creativity and logical
+                  thinking.
+                </li>
+                <li>Supporting students in building interactive projects.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- EDUCATION TAB -->
+          <div id="education" class="tab-content hidden space-y-10">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold text-purple-400">
+                Diploma in Software Engineering
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">
+                TelOne Center for Learning<br /><span class="text-purple-500"
+                  >2021 – 2024</span
+                >
+              </p>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-bold text-cyan-400">
+                Web Development Student
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">
+                Uncommon.org<br /><span class="text-cyan-500"
+                  >2025 – Present</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- ACHIEVEMENTS TAB -->
+          <div id="achievements" class="tab-content hidden space-y-6">
+            <div
+              class="bg-gray-800 p-6 rounded-lg shadow-lg flex items-center space-x-3"
+            >
+              <span class="text-2xl">🏆</span>
+              <p>
+                Best Software Engineering Student Award (2024) -
+                <span class="text-blue-400">TelOne Center for Learning</span>
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-800 p-6 rounded-lg shadow-lg flex items-center space-x-3"
+            >
+              <span class="text-2xl">👩‍💻</span>
+              <p>
+                Best Overall Female in Technical Field (2024) -
+                <span class="text-blue-400">TelOne Center for Learning</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 mix-blend-overlay"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+          <span class="gradient-text">Let's Connect</span>
+        </h2>
+        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
+          Have a project in mind or want to chat about tech? I'd love to hear
+          from you!
+        </p>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2">
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-300 mb-1"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-300 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-300 mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-glow w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium text-white text-lg"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="lg:w-1/2">
+            <div class="bg-gray-800 rounded-xl p-8 h-full">
+              <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-blue-900 bg-opacity-30 rounded-full">
+                    <i data-feather="mail" class="w-6 h-6 text-blue-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-300">Email</h4>
+                    <a
+                      href="mailto:musonzaroshly@gmail.com"
+                      class="text-gray-400 hover:text-blue-400 transition-colors"
+                      >musonzaroshly@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-purple-900 bg-opacity-30 rounded-full">
+                    <i data-feather="phone" class="w-6 h-6 text-purple-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-300">Phone</h4>
+                    <a
+                      href="tel:+263783482595"
+                      class="text-gray-400 hover:text-purple-400 transition-colors"
+                      >+263 783 482 595</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-pink-900 bg-opacity-30 rounded-full">
+                    <i data-feather="map-pin" class="w-6 h-6 text-pink-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-300">Location</h4>
+                    <p class="text-gray-400">Harare, Zimbabwe</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-10">
+                <h4 class="font-medium text-gray-300 mb-4">Follow Me</h4>
+                <div class="flex gap-4">
+                  <a
+                    href="https://github.com/TanyaradzwaMusonza"
+                    class="p-3 bg-gray-700 rounded-full hover:bg-blue-600 transition-colors"
+                  >
+                    <i data-feather="github" class="w-5 h-5"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="p-3 bg-gray-700 rounded-full hover:bg-blue-400 transition-colors"
+                  >
+                    <i data-feather="twitter" class="w-5 h-5"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/tanyaradzwa-roshly-musonza
+
+"
+                    class="p-3 bg-gray-700 rounded-full hover:bg-blue-800 transition-colors"
+                  >
+                    <i data-feather="linkedin" class="w-5 h-5"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/tanyaroshlymusonza?igsh=NngxN3BzMGU0Z3Nu"
+                    class="p-3 bg-gray-700 rounded-full hover:bg-pink-600 transition-colors"
+                  >
+                    <i data-feather="instagram" class="w-5 h-5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="notification"
+      class="fixed top-5 right-5 px-6 py-4 rounded-lg text-white font-medium shadow-lg opacity-0 pointer-events-none transition-all duration-500 z-50"
+    >
+      <!-- Message will appear here -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="flex justify-center mb-6">
+          <a href="#" class="text-2xl font-bold gradient-text">TRM</a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 mb-6">
+          <a
+            href="#about"
+            class="text-gray-400 hover:text-white transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="text-gray-400 hover:text-white transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-400 hover:text-white transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="text-gray-400 hover:text-white transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-400 hover:text-white transition-colors"
+            >Contact</a
+          >
+        </div>
+
+        <p class="text-gray-500 text-sm">
+          © 2025 Tanyaradzwa Roshly Musonza. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("K3u2-begP_daErGCB"); // emailjs.com public key
+    </script>
+  </body>
+</html>
+>>>>>>> c446d48 (Initial commit: add portfolio project)
