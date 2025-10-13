@@ -237,12 +237,23 @@ form.addEventListener('submit', function(e) {
 
 
 
- const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = menuToggle.querySelector('i');
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = menuToggle.querySelector('i');
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    menuIcon.dataset.feather = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+// Toggle menu when hamburger is clicked
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  menuIcon.dataset.feather = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+  feather.replace();
+});
+
+// Close mobile menu when any link is clicked
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden'); // hide menu
+    menuIcon.dataset.feather = 'menu';  // reset icon to hamburger
     feather.replace();
   });
+});
