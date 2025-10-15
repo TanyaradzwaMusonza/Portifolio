@@ -19,12 +19,15 @@
   <body>
     <!-- Cursor Effect -->
 
-    <div
-      class="cursor-dot fixed w-4 h-4 rounded-full bg-white mix-blend-difference pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2"
-    ></div>
-    <div
-      class="cursor-circle fixed w-8 h-8 rounded-full border-2 border-white mix-blend-difference pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-out"
-    ></div>
+   
+<div
+  class="hidden md:fixed md:block cursor-dot w-4 h-4 rounded-full bg-white mix-blend-difference pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2"
+></div>
+
+<div
+  class="hidden md:fixed md:block cursor-circle w-8 h-8 rounded-full border-2 border-white mix-blend-difference pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-out"
+></div>
+
     <!-- Navigation -->
     <nav
       class="fixed w-full z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800"
